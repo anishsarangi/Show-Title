@@ -1,0 +1,23 @@
+{
+	"name":"The Extension",
+	"version":"1.0",
+	"manifest_version":2,
+	"description":"You will get the title of the URL in the console",
+	"icons":
+	{
+		"120":"images.png"
+	},
+	"browser_action":
+	{
+		 "default_icon":{"120":"images.png"},
+          "default_title": "Show-Title",
+          "default_popup": "popup.html"
+	},
+	"content_scripts":
+	[
+		{
+		"matches":["http://*/*","https://*/*"],
+		"js":["jquery.js","show.js"]
+		}
+	]
+}
